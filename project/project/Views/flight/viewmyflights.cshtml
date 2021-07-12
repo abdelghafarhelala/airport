@@ -1,0 +1,64 @@
+﻿@model List<project.Models.flight>
+@{
+    ViewBag.Title = "viewmyflights";
+}
+
+<style>
+    th{
+        font-family: sans-serif;
+    }
+</style>
+<h2>Flights</h2>
+
+@foreach (var item in Model)
+{
+<h2 style="text-align:center; color: #EB233C "> The Flight Number is  @item.f_id</h2>
+<table style="text-align:center;margin:auto">
+    
+    <tr style=" font-size:18px;text-align:center;padding:20px;margin:auto;font-weight:normal;color:gray">
+        <th> Passanger Name &nbsp; </th>
+        <th> &nbsp;flight date</th>
+        <th> &nbsp;from</th>
+        <th>  &nbsp; &nbsp; To</th>
+        <th> &nbsp; &nbsp;Diriction</th>
+        <th> &nbsp; &nbsp;Price</th>
+    </tr>
+    <tr style="font-size:15px; padding:20px;margin:auto">
+        <td>
+            @if (item.passenger.name != null)
+            {
+                <p> &nbsp; &nbsp; @item.passenger.name</p>
+            }
+        </td>
+
+        <td>
+            <p> &nbsp;&nbsp; @item.date </p>
+
+        </td>
+        <td>
+            @if (item.from.from1 != null)
+            {
+                <p> &nbsp; @item.from.from1</p>
+            }
+        </td>
+        <td>
+            @if (item.catloge.name != null)
+            {
+                <p> &nbsp; @item.catloge.name</p>
+            }
+        </td>
+        <td>
+            @if (item.select_dir.dir != null)
+            {
+                <p> &nbsp; @item.select_dir.dir</p>
+            }
+        </td>
+        <td>
+            @if (item.catloge.price != null)
+            {
+                <p> &nbsp; @item.catloge.price</p>
+            }
+        </td>
+    </tr>
+</table>
+}

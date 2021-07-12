@@ -1,0 +1,70 @@
+﻿@model project.Models.passenger
+
+@{
+    ViewBag.Title = "editprofile";
+}
+
+<h2>editprofile</h2>
+
+<form method="post">
+  
+    <table style="        text-align: center;
+        font-weight: bold;
+        margin: auto;
+">
+        <tr style=" text-align:center;">
+            <td style="color: #EB233C">@Html.LabelFor(n => n.name) </td>
+            <td style="color: black; padding-bottom: 12px;margin-bottom: 12px;padding-left:8px">@Html.TextBoxFor(n => n.name)  </td>
+            <td>@Html.ValidationMessageFor(n => n.name)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.age) </td>
+            <td style="color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px"> @Html.TextBoxFor(n => n.age) </td>
+            <td>@Html.ValidationMessageFor(n => n.age)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.email) </td>
+            <td style="color: black; padding-bottom: 12px; margin-bottom: 12px;padding-left:8px">@Html.TextBoxFor(n => n.email)</td>
+            <td>@Html.ValidationMessageFor(n => n.email)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C;">@Html.LabelFor(n => n.password) </td>
+            <td style=" color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px">@Html.PasswordFor(n => n.password)</td>
+            <td>@Html.ValidationMessageFor(n => n.password)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C;">@Html.LabelFor(n => n.confpassword) </td>
+            <td style=" color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px">@Html.PasswordFor(n => n.confpassword)</td>
+            <td>@Html.ValidationMessageFor(n => n.confpassword)</td>
+        </tr>
+
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.country) </td>
+            <td style=" color: black;padding-bottom: 12px;margin-bottom: 12px;padding-left:8px">@Html.TextBoxFor(n => n.country)</td>
+            <td>@Html.ValidationMessageFor(n => n.country)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.phone) </td>
+            <td style=" color: black;padding-bottom: 12px;margin-bottom: 12px;padding-left:8px">@Html.TextBoxFor(n => n.phone)</td>
+            <td>@Html.ValidationMessageFor(n => n.phone)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.BD) </td>
+            <td style="color: black;padding-bottom: 12px;margin-bottom: 12px;padding-left:8px">@Html.TextBoxFor(n => n.BD)</td>
+            <td>@Html.ValidationMessageFor(n => n.BD)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.gender) </td>
+            <td><input type="radio" value="male" name="gender" />male <input type="radio" value="female" name="gender" style=" padding-bottom: 15px; margin-bottom: 15px" />female</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color: #EB233C;padding-bottom: 15px;margin-bottom: 15px"><input type="submit" value="save" /></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>
+
+

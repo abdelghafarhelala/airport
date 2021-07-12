@@ -1,0 +1,39 @@
+﻿@model project.Models.passenger
+@{
+    ViewBag.Title = "login";
+}
+
+<h2>login</h2>
+<form method="post" style=" text-align :center ;">
+    <table style="        text-align: center;
+        font-weight: bold;
+        padding-bottom: 30px;
+        margin: auto;
+        height: 50%;
+        margin-bottom:10px;
+">
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.email) </td>
+            <td style="color: black; padding-bottom: 12px; margin-bottom: 12px">@Html.TextBoxFor(n => n.email)</td>
+            <td>@Html.ValidationMessageFor(n => n.email)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.password) </td>
+            <td style=" color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:5px">@Html.PasswordFor(n => n.password)</td>
+            <td>@Html.ValidationMessageFor(n => n.password)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color: black;padding-bottom: 15px; margin-bottom: 15px"><input type="submit" value="Login" /></td>
+            <td>
+                @if (ViewBag.status != null)
+                {
+                    <label style="color:red; font-weight:bold;">@ViewBag.status</label>}
+
+            </td>
+        </tr>
+
+
+
+    </table>
+</form>

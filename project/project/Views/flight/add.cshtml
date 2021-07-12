@@ -1,0 +1,63 @@
+﻿@model project.Models.flight
+@{
+    ViewBag.Title = "add";
+}
+
+<h2>Book Flight</h2>
+
+<form method="post">
+    <table style="        text-align: center;
+        font-weight: bold;
+        margin: auto;
+">
+        @*<tr style=" text-align:center;">
+            <td style="color: #EB233C">@Html.LabelFor(n => n.passenger.name) </td>
+            <td style="color: black; padding-bottom: 12px;margin-bottom: 12px;padding-left:8px">@Html.TextBoxFor(n => n.passenger.name)  </td>
+            <td>@Html.ValidationMessageFor(n => n.passenger.name)</td>
+        </tr>*@
+        <tr>
+            <td style="color: #EB233C">@Html.LabelFor(n => n.date) </td>
+            <td style="color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px"> @Html.TextBoxFor(n => n.date) </td>
+            <td>@Html.ValidationMessageFor(n => n.date)</td>
+        </tr>
+        <tr>
+            <td style="color: #EB233C">  @Html.LabelFor(n => n.select_dir.dir) </td>
+            <td style="color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px">  @Html.DropDownListFor(n => n.s_id, (SelectList)ViewBag.liii)</td>
+            <td>   </td>
+        </tr>
+       
+
+            <tr>
+                <td style="color: #EB233C">  @Html.LabelFor(n => n.from.from1) </td>
+                <td style="color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px">  @Html.DropDownListFor(n => n.fr_id, (SelectList)ViewBag.lii)</td>
+                <td>   </td>
+            </tr>
+
+
+        
+          <tr>
+            <td style="color: #EB233C">  @Html.LabelFor(n => n.catloge.name) </td>
+            <td style="color: black;padding-bottom: 12px; margin-bottom: 12px;padding-left:8px">  @Html.DropDownListFor(n => n.cat_id, (SelectList)ViewBag.li)</td>
+            <td>   </td>
+        </tr>
+
+       
+
+
+      
+        @*<tr>
+            <td style="color: #EB233C">  @Html.LabelFor(n => n.catloge.price) </td>
+            <td > <label style="color:red; font-weight:bold;">@ViewBag.status</label></td>
+            <td>   </td>
+        </tr>*@
+
+        <tr>
+            <td></td>
+            <td style="color: #EB233C;padding-bottom: 15px;margin-bottom: 15px"><input type="submit" value="Book" /></td>
+            <td></td>
+        </tr>
+    </table>
+
+</form>
+
+
